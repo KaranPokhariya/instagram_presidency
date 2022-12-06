@@ -23,7 +23,13 @@ to_follow = [x for x in recommendations if x not in followed]
 # Username - mlnc_confessions_
 # Password - MLAconfess@
 
-driver = webdriver.Chrome()
+from selenium.webdriver import FirefoxOptions
+
+opts = FirefoxOptions()
+opts.add_argument("--headless")
+
+
+driver = webdriver.Firefox(options=opts)
 
 driver.get("http://www.instagram.com")
 
@@ -35,9 +41,9 @@ password = WebDriverWait(driver, 10).until(
 
 #enter username and password
 username.clear()
-username.send_keys("stonehill_intl_confessions")
+username.send_keys("presidency_blr_confessions")
 password.clear()
-password.send_keys("STONE1234@")
+password.send_keys("qwerty.1234")
 
 #target the login button and click it
 button = WebDriverWait(driver, 2).until(EC.element_to_be_clickable(
