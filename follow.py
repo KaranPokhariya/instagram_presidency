@@ -25,11 +25,11 @@ to_follow = [x for x in recommendations if x not in followed]
 
 from selenium.webdriver import FirefoxOptions
 
-#opts = FirefoxOptions()
-#opts.add_argument("--headless")
+opts = FirefoxOptions()
+opts.add_argument("--headless")
 
 
-driver = webdriver.Firefox()
+driver = webdriver.Firefox(options=opts)
 
 driver.get("http://www.instagram.com")
 
