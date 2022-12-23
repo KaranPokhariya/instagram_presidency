@@ -86,7 +86,7 @@ for user in to_follow:
     print(user)
     driver.get('https://www.instagram.com/'+ user)
 
-    time.sleep(random.uniform(60,65))
+    time.sleep(random.uniform(60,90))
 
     # searchbox = WebDriverWait(driver, 10).until(
     #     EC.element_to_be_clickable((By.XPATH, "//input[@placeholder='Search']")))
